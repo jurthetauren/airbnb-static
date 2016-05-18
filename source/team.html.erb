@@ -1,0 +1,33 @@
+<!-- <div class="container text-center padded">
+  <h1>Our team</h1>
+  <ul class="list-inline">
+    <li>
+      <h2>Paul</h2>
+      <img src="http://fillmurray.com/g/200/300" alt="" class="img-circle">
+    </li>
+    <li>
+      <h2>John</h2>
+      <img src="http://fillmurray.com/g/200/300" alt="" class="img-circle">
+    </li>
+    <li>
+      <h2>Georges</h2>
+      <img src="http://fillmurray.com/g/200/300" alt="" class="img-circle">
+    </li>
+  </ul>
+
+  <h3 class="padded">
+    <a href="mailto:contact@airbnb.com">
+      <i class="fa fa-envelope"></i> contact@airbnb.com
+    </a>
+  </h3>
+</div>
+ -->
+
+ <ul class="list-inline text-center">
+  <% data.team.each do |member| %>
+    <li>
+      <%= image_tag member.image, class: "avatar-large" %>
+      <h3><%= member.name.capitalize %></h3>
+    </li>
+  <% end %>
+</ul>
